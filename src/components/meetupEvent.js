@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './meetupEvent.css'
 const MeetupEvent = ({
   data: {
     id,
@@ -16,35 +17,16 @@ const MeetupEvent = ({
   const localeTime = combinedDate.toLocaleTimeString()
 
   return (
-    <div
-      data-id={id}
-      data-status={status}
-      style={{
-        display: `inline-block`,
-        background: `#fff`,
-        borderRadius: `0.25rem`,
-        padding: `1.5rem`,
-        margin: `0.75rem 0`,
-        boxShadow: ` 0 5px 5px rgba(0,0,0,0.1)`,
-        color: `black`,
-        width: `100%`,
-      }}
-      target="_blank"
-    >
-      <h6 style={{ color: `#004050`, margin: `0.25rem 0` }}>
+    <div class="meetup-event" data-id={id} data-status={status}>
+      <h6 class="date">
         {localeDate} {localeTime}
       </h6>
-      <h3 style={{ margin: `0.25rem 0` }}>{name}</h3>
-      <h6 style={{ color: `#333` }}>{`${venueName}, ${address}, ${city}`}</h6>
+      <h3 class="title">{name}</h3>
+      <h6 class="location">{`${venueName}, ${address}, ${city}`}</h6>
       <div
+        class="description"
         dangerouslySetInnerHTML={{
-          __html:
-            `<style>
-            p {
-              margin: 0.125rem;
-              font-family: sans-serif;
-            }
-          </style>` + description,
+          __html: description,
         }}
       ></div>
     </div>

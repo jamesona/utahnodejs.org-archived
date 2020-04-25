@@ -1,0 +1,28 @@
+.meetup-event {
+  display: inline-block;
+  background: #fff;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  margin: 0.75rem 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+  width: 100%;
+}
+
+.meetup-event .date {
+  color: #004050;
+}
+
+.meetup-event .title,
+.meetup-event .date {
+  margin: 0.25rem 0;
+}
+
+.meetup-event .location {
+  color: #333;
+}
+
+.meetup-event .description p {
+  margin: 0.125rem;
+  font-family: sans-serif;
+}

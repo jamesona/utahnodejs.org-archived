@@ -1,0 +1,25 @@
+header {
+  background-color: rgb(47, 47, 47);
+  background-image: linear-gradient(60deg, rgb(46, 90, 85), rgb(86, 160, 81));
+  color: white;
+  margin: -1.45rem auto 0;
+  max-width: 100vw;
+  padding: 5rem 6rem;
+  text-align: center;
+}
+
+header .links {
+  display: flex;
+  justify-content: center;
+}
+
+header .links a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-right: 2rem;
+}

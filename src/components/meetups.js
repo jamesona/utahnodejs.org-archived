@@ -36,8 +36,10 @@ const MeetupList = ({ filter }) => {
         .filter(event => (typeof filter === 'function' ? filter(event) : true))
         .map(event => (
           <a
+            key={event.id}
             href={event.link}
             target="_blank"
+            rel="noopener noreferrer"
             style={{ width: `100%`, maxWidth: `60rem` }}
           >
             <MeetupEvent data={event} />
