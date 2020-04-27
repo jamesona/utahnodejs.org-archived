@@ -1,0 +1,1 @@
+{"data":{"allProject":{"nodes":[{"name":"project1","url":"https://github.com/organization/project1","description":"The Project 1"},{"name":"project2","url":"https://github.com/organization/project2","description":"The Project 2"}]},"setting":{"url":"http://organization-site/","title":"An awesome organization","organization":"Organization","logoName":"logo.svg"}}}
