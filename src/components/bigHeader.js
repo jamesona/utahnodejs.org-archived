@@ -5,29 +5,31 @@ import SEO from './seo'
 import './bigHeader.css'
 
 const BigHeader = () => {
-  const data = useStaticQuery(graphql`
+  const {
+    site: {
+      siteMetadata: { title, links },
+    },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
+          links {
+            text
+            url
+          }
         }
       }
     }
   `)
 
-  const links = {
-    Meetup: 'https://www.meetup.com/utahnodejs/',
-    Slack: `https://utahjavascript.slack.com/`,
-    Videos: `https://www.youtube.com/channel/UCTtJSLgPjnBXAZFUunzx2kw`,
-    Events: `/#upcoming-events`,
-  }
   return (
-    <header>
+    <header class="big">
       <SEO title="Home" />
-      <h1>{data.site.siteMetadata.title}</h1>
+      <h1>{title}</h1>
       <div class="links">
-        {Object.keys(links).map(text => (
-          <a href={links[text]} key={text}>
+        {links.map(({ text, url }) => (
+          <a href={url} key={text}>
             <h4 style={{ margin: `0` }}>{text}</h4>
           </a>
         ))}

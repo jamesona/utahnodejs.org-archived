@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import MeetupEvent from './meetupEvent'
 
-const MeetupList = ({ filter }) => {
+const MeetupList = ({ children, filter }) => {
   const data = useStaticQuery(graphql`
     query {
       meetup {
@@ -33,7 +33,7 @@ const MeetupList = ({ filter }) => {
       }}
     >
       {data.meetup.events
-        .filter(event => (typeof filter === 'function' ? filter(event) : true))
+        .filter(typeof filter === 'function' ? filter : () => true)
         .map(event => (
           <a
             key={event.id}
@@ -45,6 +45,7 @@ const MeetupList = ({ filter }) => {
             <MeetupEvent data={event} />
           </a>
         ))}
+      {children}
     </div>
   )
 }

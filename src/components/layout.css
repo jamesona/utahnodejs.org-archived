@@ -210,6 +210,12 @@ body {
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
+header {
+  background-color: rgb(47, 47, 47);
+  background-image: linear-gradient(60deg, rgb(46, 90, 85), rgb(86, 160, 81));
+  color: white;
+  margin-bottom: 1.45rem;
+}
 img {
   max-width: 100%;
   margin-left: 0;

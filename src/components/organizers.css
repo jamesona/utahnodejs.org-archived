@@ -1,0 +1,23 @@
+.organizers {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.organizers .organizer {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.organizers .organizer .avatar {
+  display: block;
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}

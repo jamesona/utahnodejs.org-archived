@@ -1,11 +1,11 @@
 .meetup-event {
-  display: inline-block;
   background: #fff;
   border-radius: 0.25rem;
-  padding: 1.5rem;
-  margin: 0.75rem 0;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   color: black;
+  display: inline-block;
+  margin: 0.75rem 0;
+  padding: 1.5rem;
   width: 100%;
 }
 
