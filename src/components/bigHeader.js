@@ -7,17 +7,20 @@ import './bigHeader.css'
 const BigHeader = () => {
   const {
     site: {
-      siteMetadata: { title, links },
+      siteMetadata: { title },
     },
+    content: { links },
   } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           title
-          links {
-            text
-            url
-          }
+        }
+      }
+      content {
+        links {
+          text
+          url
         }
       }
     }

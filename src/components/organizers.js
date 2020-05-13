@@ -5,17 +5,13 @@ import './organizers.css'
 
 const Organizers = () => {
   const {
-    site: {
-      siteMetadata: { organizers },
-    },
+    content: { organizers },
   } = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          organizers {
-            name
-            img
-          }
+      content {
+        organizers {
+          name
+          img
         }
       }
     }
